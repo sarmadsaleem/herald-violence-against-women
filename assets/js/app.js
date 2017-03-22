@@ -56,6 +56,11 @@ $(document).ready(function(){
 		var el = $(this).attr('div-toggle');
 	    $(el).removeClass('hidden');
 
+	    //$(window).scrollTop($(el).offset().top);
+	    $('html, body').animate({
+	        scrollTop: $(el).offset().top
+	    }, 400);
+
 	});
 
 	$('#legi-con .date').click(function(){
@@ -66,6 +71,11 @@ $(document).ready(function(){
 		$('#legislations .legislation').addClass('hidden');
 		var el = $(this).attr('div-toggle');
 	    $(el).removeClass('hidden');
+
+	    //$(window).scrollTop($(el).offset().top);
+	    $('html, body').animate({
+	        scrollTop: $(el).offset().top
+	    }, 400);
 
 	});
 
