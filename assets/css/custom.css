@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@font-face {font-family: 'HelveticaNeueLTStd-Bd';src: url('../fonts/2794C7_0_0.eot');src: url('../fonts/2794C7_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_0_0.woff') format('woff'),url('../fonts/2794C7_0_0.ttf') format('truetype');}  
+@font-face {font-family: 'HelveticaNeueLTStd-BdIt';src: url('../fonts/2794C7_1_0.eot');src: url('../fonts/2794C7_1_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_1_0.woff') format('woff'),url('../fonts/2794C7_1_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNeueLTStd-Roman';src: url('../fonts/2794C7_2_0.eot');src: url('../fonts/2794C7_2_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_2_0.woff') format('woff'),url('../fonts/2794C7_2_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNeueLTStd-Th';src: url('../fonts/2794C7_3_0.eot');src: url('../fonts/2794C7_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_3_0.woff') format('woff'),url('../fonts/2794C7_3_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNeueLTStd-It';src: url('../fonts/2794C7_4_0.eot');src: url('../fonts/2794C7_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_4_0.woff') format('woff'),url('../fonts/2794C7_4_0.ttf') format('truetype');}
+@font-face {font-family: 'HelveticaNeueLTStd-ThIt';src: url('../fonts/2794C7_5_0.eot');src: url('../fonts/2794C7_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_5_0.woff') format('woff'),url('../fonts/2794C7_5_0.ttf') format('truetype');}
+
+.navbar{margin:0 15px 0 15px;}
+.navbar-header{border-bottom:1px solid #ccc;}
+.navbar-brand{width:100px; margin:20px 0 15px 0; padding:0; height:auto;}
+.navbar-brand img{width:100%;}
+
+.content{margin-bottom:20px;}
+.content h1{color:#B70000; font-family: 'HelveticaNeueLTStd-Th';}
+.content p{font-family: 'HelveticaNeueLTStd-Roman';}
+
+.tabs .c-tab{width:45vw; padding:5px; font-weight:200; font-family: 'HelveticaNeueLTStd-Th';}
+
+.tabs .nav-tabs>li>a{border-radius:0; text-transform: uppercase; color:#fff; background:#525252;}
+.tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {border:0; background: #B70000; color:#fff;}
+.tabs .nav-tabs{border:0;}
+.tabs .date{margin:0; padding:0; font-family: 'Raleway', sans-serif;}
+.tabs .date:focus, .tabs .date:hover{text-decoration: none;} 
+.tabs .date:focus div, .tabs>.date:hover div{color:#B70000; text-decoration: none;} 
+.tabs .date div{background:#ccc; font-size:45px; word-break: break-all; line-height: 40px; padding:5px 0 10px 0; font-weight: 900; text-align: center; color:#525252; margin:0 5px 5px 0;}
+.tabs .tab-pane{margin-top:10px;}
+.tabs .i-row{border-top:1px solid #B70000; border-bottom:1px solid #B70000; margin-top:-1px; padding:10px 0 10px 0;}
+
+.tabs .i-img{width:25%; display: inline-block;}
+.tabs .i-img img{width:100%;}
+.tabs .i-text{display:inline-block; vertical-align: top; width: 73%; padding-left:5px;}
+.tabs .i-text .i-tag{display:inline-block; background:#B70000; padding:5px; color:#fff; font-size:14px; font-family: 'HelveticaNeueLTStd-Bd'; margin-bottom:10px;}
+.tabs .i-text .i-desc{color:#B70000;font-size:22px; font-family: 'HelveticaNeueLTStd-Th'; line-height: 22px;}
+.tabs .i-date{color:#B70000; font-size:18px; font-weight: 600; line-height: 18px; font-family: 'Raleway', sans-serif;}
+.tabs .i-area{color:#B70000; font-size:26px; font-weight: 200; font-family: 'HelveticaNeueLTStd-Th';}
+
+.tabs .l-row{padding:10px 0 10px 0;}
+.tabs .l-img{width:25%; display:inline-block;}
+.tabs .l-img img{width:100%;}
+.tabs .l-text{display:inline-block; vertical-align:bottom; width:73%; padding-left:5px;}
+.tabs .l-tag{color:#B70000; font-size:15px; font-weight:900; line-height: 15px; font-family: 'Raleway', sans-serif;}
+.tabs .l-desc{color:#B70000; font-size:22px; font-weight:200; letter-spacing: -0.1px; word-spacing: -0.1px; font-family: 'HelveticaNeueLTStd-Th';}
+
+/* media queries */
+@media screen and (min-width:615px) and (max-width: 768px) { .tabs .c-tab{width:46vw;} }
+@media screen and (min-width:490px) and (max-width: 614px) { .tabs .c-tab{width:45vw;} }
+@media screen and (min-width:351px) and (max-width: 489px) { .tabs .c-tab{width:43vw;} }
+@media screen and (max-width: 350px) { .tabs .c-tab{width:41vw;} }
