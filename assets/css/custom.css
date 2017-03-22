@@ -11,7 +11,7 @@
 .red-text div{color:#B70000 !important;}
 
 .navbar{margin:0 15px 0 15px;}
-.navbar-header{border-bottom:1px solid #ccc;}
+.navbar-header{border-bottom:1px solid #ccc; margin-left:-5px;}
 .navbar-brand{width:100px; margin:20px 0 15px 0; padding:0; height:auto;}
 .navbar-brand img{width:100%;}
 
@@ -30,7 +30,7 @@
 .tabs .tab-pane{margin-top:10px;}
 .tabs .i-row{border-top:1px solid #B70000; border-bottom:1px solid #B70000; margin-top:-1px; padding:10px 0 10px 0;}
 
-.tabs .i-img{width:25%; display: inline-block;}
+.tabs .i-img{width:20%; display: inline-block;}
 .tabs .i-img img{width:100%;}
 .tabs .i-text{display:inline-block; vertical-align: top; width: 73%; padding-left:10px;}
 .tabs .i-text .i-tag{display:inline-block; background:#B70000; padding: 7px 8px 4px 8px; color:#fff; font-size:14px; font-family: 'HelveticaNeueLTStd-Bd'; margin-bottom:10px;}
@@ -39,17 +39,33 @@
 .tabs .i-area{color:#B70000; font-size:26px; font-weight: 200; font-family: 'HelveticaNeueLTStd-Th';}
 
 .tabs .l-row{padding:10px 0 10px 0;}
-.tabs .l-img{width:25%; display:inline-block;}
+.tabs .l-img{width:20%; display:inline-block;}
 .tabs .l-img img{width:100%;}
 .tabs .l-text{display:inline-block; vertical-align:bottom; width:73%; padding-left:10px;}
 .tabs .l-tag{color:#B70000; font-size:15px; font-weight:900; line-height: 15px; font-family: 'Raleway', sans-serif;}
 .tabs .l-desc{color:#B70000; font-size:22px; font-weight:200; letter-spacing: -0.1px; word-spacing: -0.1px; font-family: 'HelveticaNeueLTStd-Th';}
 
-.legislation{min-height: 100vh;}
-.incident{min-height: 100vh;}
+.legislation{min-height: 60vh;}
+.incident{min-height: 60vh;}
+
+footer{font-family: 'HelveticaNeueLTStd-Th';background:#424242; margin-top:10px;}
+footer p{font-size:15px; color:#ccc; padding:30px 0 30px 0; margin:0}
 
 /* media queries */
-/*@media screen and (min-width:615px) and (max-width: 768px) { .tabs .c-tab{width:46vw;} }
-@media screen and (min-width:490px) and (max-width: 614px) { .tabs .c-tab{width:45vw;} }
-@media screen and (min-width:351px) and (max-width: 489px) { .tabs .c-tab{width:43vw;} }
-@media screen and (max-width: 350px) { .tabs .c-tab{width:41vw;} }*/
+@media screen and (min-width:768px) {
+	.content h1{margin-top:30px;}
+	.content p{font-size:18px;}
+	.tabs .c-tab{font-size:18px;padding:10px 10px 7px 15px;}
+	.tabs .i-img{width:10%;}
+	.tabs .l-img{width:10%;}
+	.navbar-header{border-bottom:0}
+	.navbar{border-bottom:1px solid #ccc;}
+
+	.tabs .i-date{font-size:20px;}
+	.tabs .i-area{font-size:28px;}
+	.tabs .i-text .i-tag{font-size:16px;}
+	.tabs .i-text .i-desc{font-size:24px;}
+	.tabs .l-tag{font-size:16px;}
+	.tabs .l-desc{font-size:24px;}
+
+}
