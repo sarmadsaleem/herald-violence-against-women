@@ -7,6 +7,9 @@
 @font-face {font-family: 'HelveticaNeueLTStd-It';src: url('../fonts/2794C7_4_0.eot');src: url('../fonts/2794C7_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_4_0.woff') format('woff'),url('../fonts/2794C7_4_0.ttf') format('truetype');}
 @font-face {font-family: 'HelveticaNeueLTStd-ThIt';src: url('../fonts/2794C7_5_0.eot');src: url('../fonts/2794C7_5_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2794C7_5_0.woff') format('woff'),url('../fonts/2794C7_5_0.ttf') format('truetype');}
 
+.red-text{color:#B70000 !important;}
+.red-text div{color:#B70000 !important;}
+
 .navbar{margin:0 15px 0 15px;}
 .navbar-header{border-bottom:1px solid #ccc;}
 .navbar-brand{width:100px; margin:20px 0 15px 0; padding:0; height:auto;}
@@ -21,9 +24,7 @@
 .tabs .nav-tabs>li>a{border-radius:0; text-transform: uppercase; color:#fff; background:#525252;}
 .tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {border:0; background: #B70000; color:#fff;}
 .tabs .nav-tabs{border:0;}
-.tabs .date{margin:0; padding:0; font-family: 'Raleway', sans-serif;}
-.tabs .date:focus, .tabs .date:hover{text-decoration: none;} 
-.tabs .date:focus div, .tabs>.date:hover div{color:#B70000; text-decoration: none;} 
+.tabs .date{margin:0; padding:0; font-family: 'Raleway', sans-serif; cursor: pointer;}
 .tabs .date div{background:#ccc; font-size:45px; word-break: break-all; line-height: 40px; padding:5px 0 10px 0; font-weight: 900; text-align: center; color:#525252; margin:0 5px 5px 0;}
 .tabs .tab-pane{margin-top:10px;}
 .tabs .i-row{border-top:1px solid #B70000; border-bottom:1px solid #B70000; margin-top:-1px; padding:10px 0 10px 0;}
