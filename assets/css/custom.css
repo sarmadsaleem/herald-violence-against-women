@@ -24,9 +24,9 @@
 .tabs .nav-tabs>li>a{border-radius:0; text-transform: uppercase; color:#fff; background:#525252; margin:0; width:100%; border:0;}
 .tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {background: #B70000; color:#fff; border:0;}
 .tabs .nav-tabs{border:0; display:block;}
-.tabs .nav-tabs>li{width:50%;}
+.tabs .nav-tabs>li{width:100%;}
 .tabs .date{margin:0; padding:0; font-family: 'Raleway', sans-serif; cursor: pointer;}
-.tabs .date div{background:#ccc; font-size:45px; word-break: break-all; line-height: 40px; padding:5px 0 10px 0; font-weight: 900; text-align: center; color:#525252; margin:0 5px 5px 0;}
+.tabs .date div{background:#ccc; font-size:45px; word-break: break-all; line-height: 40px; padding:25px 0 30px 0; font-weight: 900; text-align: center; color:#525252; margin:0 5px 5px 0;}
 .tabs .tab-pane{margin-top:10px;}
 .tabs .i-row{border-top:1px solid #B70000; border-bottom:1px solid #B70000; margin-top:-1px; padding:10px 0 10px 0;}
 
@@ -45,7 +45,7 @@
 .tabs .l-tag{color:#B70000; font-size:15px; font-weight:900; line-height: 15px; font-family: 'Raleway', sans-serif;}
 .tabs .l-desc{color:#B70000; font-size:22px; font-weight:200; letter-spacing: -0.1px; word-spacing: -0.1px; font-family: 'HelveticaNeueLTStd-Th';}
 
-.legislation{min-height: 60vh;}
+/*.legislation{min-height: 60vh;}*/
 .incident{min-height: 60vh;}
 
 footer{font-family: 'HelveticaNeueLTStd-Th';background:#424242; margin-top:30px;width:100%;
@@ -53,7 +53,7 @@ footer{font-family: 'HelveticaNeueLTStd-Th';background:#424242; margin-top:30px;
 	position:absolute;
 	bottom:0;
 	left:0;}
-footer p{font-size:16px; color:#ccc; padding:30px 0 30px 0; margin:0}
+footer p{font-size:16px; color:#ccc; padding:30px 0 20px 0; margin:0}
 
 .social--iframe {height: auto;min-width: initial;background: initial;}
 .social{display:inline-block;}
@@ -71,6 +71,14 @@ body {
 .swrap {
 	padding-bottom:80px; /* Height of the footer element */
 }
+
+/* timeline specific */
+.tl-headline-date{display:none;}
+.tl-headline{display:none;}
+.tl-slide-scrollable-container{margin:0 auto;}
+.tl-attribution{display:none;}
+.tl-slide-content{padding-left:10px !important; padding-right:10px !important;}
+.tl-slide-text-only .tl-slide-content-container .tl-slide-content .tl-text{width:95% !important; max-width:95% !important;}
 
 
 /* media queries */

@@ -14,7 +14,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700">
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,102 +84,32 @@
 
             <ul class="nav nav-tabs" role="tablist">
               <li role="presentation" class="active"><a href="#incidents" aria-controls="incidents" role="tab" data-toggle="tab" class="c-tab">Incidents</a></li>
-              <li role="presentation"><a href="#legislations" aria-controls="Legislations" role="tab" data-toggle="tab" class="c-tab">Legislation</a></li>
+              <!--<li role="presentation"><a href="#legislations" aria-controls="Legislations" role="tab" data-toggle="tab" class="c-tab">Legislation</a></li>-->
             </ul>
 
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="incidents">
 
-                <div id="inci-con" class="row" style="margin:0"></div>
-                
-                <div id="incident-dummy" class="incident row hidden" style="margin-bottom:30px">
-
-                  <div class="col-md-12" style="margin-top:15px; margin-bottom:15px;">
-                    <div class="i-date">March, 1984</div>
-                    <div class="i-area">Nawabpur, Multan</div>
-                  </div>
-
-                  <div class="col-md-12">
-
-                    <div class="i-row">
-                      <div class="i-img"><img src="assets/img/victim-icon.png"/></div>
-                      <div class="i-text">
-                        <div class="i-tag">VICTIMS</div>
-                        <div class="i-desc">3 - names unknown</div>
-                      </div>
-                    </div>
-
-                    <div class="i-row">
-                      <div class="i-img"><img src="assets/img/perpatrator-icon.png"/></div>
-                      <div class="i-text">
-                        <div class="i-tag">PERPETRATOR</div>
-                        <div class="i-desc">Iqbal Shekana</div>
-                      </div>
-                    </div>
-
-                    <div class="i-row">
-                      <div class="i-img"><img src="assets/img/crime-icon.png"/></div>
-                      <div class="i-text">
-                        <div class="i-tag">CRIME</div>
-                        <div class="i-desc">Stripping and parading women on the streets</div>
-                      </div>
-                    </div>
-
-                    <div class="i-row">
-                      <div class="i-img"><img src="assets/img/verdict-icon.png"/></div>
-                      <div class="i-text">
-                        <div class="i-tag">VERDICT</div>
-                        <div class="i-desc">Guilty</div>
-                      </div>
-                    </div>
-
-                    <div class="i-row">
-                      <div class="i-img"><img src="assets/img/sentence-icon.png"/></div>
-                      <div class="i-text">
-                        <div class="i-tag">SENTENCE</div>
-                        <div class="i-desc">15 public lashes / 3 years in prison</div>
-                      </div>
-                    </div>
-
-                  </div>
+                <div id="inci-con" class="row" style="margin:0">
+                  
                 </div>
+
+                <div id='timeline-embed' style="width: 100%; height: 600px"></div>
+                
+                
 
 
               </div>
-              <div role="tabpanel" class="tab-pane" id="legislations">
+<!--               <div role="tabpanel" class="tab-pane" id="legislations">
                 
                 <div id="legi-con" class="row" style="margin:0">
                   
 
                 </div>
                 
-                <div id="Legislation-dummy" class="legislation row hidden" style="margin-bottom:30px">
+                
 
-                  <div class="col-md-12">
-
-                    <div class="l-row" style="border-top:1px solid #B70000; margin-top:20px;">
-                      <div class="l-img"><img src="assets/img/law-icon.png"/></div>
-                      <div class="l-text">
-                        <div class="l-tag">LAW</div>
-                        <div class="l-desc">Hudood Ordinance</div>
-                      </div>
-                    </div>
-
-                    <div class="l-row">
-                        <div class="l-tag">REGIME</div>
-                        <div class="l-desc">Ziaul Haq</div>
-                    </div>
-
-                    <div class="l-row">
-                        <div class="l-tag">KEY FEATURES</div>
-                        <div class="l-desc">Zina becomes liable to the Islamic penalty of hadd (resulting in complaints of rape being taken as confessions of zina).</div>
-                    </div>
-
-
-                  </div>
-                </div>
-
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -217,6 +148,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
     <script src="assets/js/app.js"></script>
+    
   </body>
 </html>
