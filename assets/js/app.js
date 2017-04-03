@@ -49,7 +49,8 @@ $.getJSON(incidents_endpoint, function(data) {
 			  return (Math.abs(curr - iyear) < Math.abs(prev - iyear) ? curr : prev);
 			});
 
-			timeline.goToNext(timeline_years.indexOf(iyear));
+			//console.log(timeline_years.indexOf(closest));
+			timeline.goTo(timeline_years.indexOf(closest));
 
 			$('#inci-con .date').removeClass('red-text');
 			$(this).addClass('red-text');
