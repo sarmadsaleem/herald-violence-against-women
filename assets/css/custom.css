@@ -80,6 +80,7 @@ body {
 .tl-slide-content{padding-left:10px !important; padding-right:10px !important;}
 .tl-slide-text-only .tl-slide-content-container .tl-slide-content .tl-text{width:95% !important; max-width:95% !important;}
 #timeline-embed{margin-bottom: 50px;width: 100%; height: 600px}
+.tl-slide .tl-slide-content-container{vertical-align: top !important;}
 
 /* media queries */
 @media screen and (min-width:768px) {
