@@ -6,6 +6,7 @@ var writeup_endpoint = 'https://spreadsheets.google.com/feeds/cells/19dZQg8tGtOs
 
 var year;
 var counter;
+var timeline;
 
 //populate writeup
 $.getJSON(writeup_endpoint, function(data){
@@ -29,8 +30,8 @@ $.getJSON(incidents_endpoint, function(data) {
 
 		year = this.gsx$yearofincident.$t.split(' ');
 		year = year[year.length - 1][0] + year[year.length - 1][1] + year[year.length - 1][2] + year[year.length - 1][3];
-		$('#inci-con').append('<div id="i-anc-'+counter+'" class="col-xs-3 col-md-2 date" div-toggle="#incident-'+counter+'"><div>'+year+'</div></div>');
-		$('#incidents').append('<div id="incident-'+counter+'" class="incident row hidden" style="margin-bottom:10px"> <div class="col-md-12" style="margin-top:15px; margin-bottom:15px;"> <div class="i-date">'+this.gsx$yearofincident.$t+'</div><div class="i-area">'+this.gsx$place.$t+'</div></div><div class="col-md-12"> <div class="i-row"> <div class="i-img"><img src="assets/img/victim-icon.png"/></div><div class="i-text"> <div class="i-tag">VICTIMS</div><div class="i-desc">'+this.gsx$victim.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/perpatrator-icon.png"/></div><div class="i-text"> <div class="i-tag">PERPETRATOR</div><div class="i-desc">'+this.gsx$perpetrator.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/crime-icon.png"/></div><div class="i-text"> <div class="i-tag">CRIME</div><div class="i-desc">'+this.gsx$crime.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/verdict-icon.png"/></div><div class="i-text"> <div class="i-tag">VERDICT</div><div class="i-desc">'+this.gsx$verdict.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/sentence-icon.png"/></div><div class="i-text"> <div class="i-tag">SENTENCE</div><div class="i-desc">'+this.gsx$sentence.$t+'</div></div></div></div></div>');
+		$('#inci-con').append('<div id="i-anc-'+counter+'" class="col-xs-3 col-md-3 date" div-toggle="#incident-'+counter+'"><div>'+year+'</div></div>');
+		$('#incidents').append('<div id="incident-'+counter+'" class="incident row hidden" style="margin-bottom:50px"> <div class="col-md-12" style="margin-top:15px; margin-bottom:15px;"> <div class="i-date">'+this.gsx$yearofincident.$t+'</div><div class="i-area">'+this.gsx$place.$t+'</div></div><div class="col-md-12"> <div class="i-row"> <div class="i-img"><img src="assets/img/victim-icon.png"/></div><div class="i-text"> <div class="i-tag">VICTIMS</div><div class="i-desc">'+this.gsx$victim.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/perpatrator-icon.png"/></div><div class="i-text"> <div class="i-tag">PERPETRATOR</div><div class="i-desc">'+this.gsx$perpetrator.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/crime-icon.png"/></div><div class="i-text"> <div class="i-tag">CRIME</div><div class="i-desc">'+this.gsx$crime.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/verdict-icon.png"/></div><div class="i-text"> <div class="i-tag">VERDICT</div><div class="i-desc">'+this.gsx$verdict.$t+'</div></div></div><div class="i-row"> <div class="i-img"><img src="assets/img/sentence-icon.png"/></div><div class="i-text"> <div class="i-tag">SENTENCE</div><div class="i-desc">'+this.gsx$sentence.$t+'</div></div></div></div></div>');
 		counter++;
 	});
 
@@ -39,6 +40,8 @@ $.getJSON(incidents_endpoint, function(data) {
 	$(document).ready(function(){
 
 		$('#inci-con .date').click(function(){
+
+			console.log(timeline);
 
 			$('#inci-con .date').removeClass('red-text');
 			$(this).addClass('red-text');
@@ -91,7 +94,7 @@ $.getJSON(legislation_endpoint, function(data) {
 	});
 
 	var timeline_data = {events:timeline_events};
-	var timeline = new TL.Timeline('timeline-embed', timeline_data);
+	timeline = new TL.Timeline('timeline-embed', timeline_data);
 	//console.log(timeline_events);
 
 	console.log('legislation populated');

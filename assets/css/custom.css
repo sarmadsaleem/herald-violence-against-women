@@ -39,9 +39,9 @@
 .tabs .i-area{color:#B70000; font-size:26px; font-weight: 200; font-family: 'HelveticaNeueLTStd-Th';}
 
 .tabs .l-row{padding:10px 0 10px 0;}
-.tabs .l-img{width:20%; display:inline-block; vertical-align: top;}
+.tabs .l-img{width:20%; display:block; vertical-align: top;}
 .tabs .l-img img{width:100%;}
-.tabs .l-text{display:inline-block; vertical-align:bottom; width:73%; padding-left:10px;}
+.tabs .l-text{display:block; vertical-align:bottom; margin-top:20px;}
 .tabs .l-tag{color:#B70000; font-size:15px; font-weight:900; line-height: 15px; font-family: 'Raleway', sans-serif;}
 .tabs .l-desc{color:#B70000; font-size:22px; font-weight:200; letter-spacing: -0.1px; word-spacing: -0.1px; font-family: 'HelveticaNeueLTStd-Th';}
 
@@ -79,7 +79,7 @@ body {
 .tl-attribution{display:none;}
 .tl-slide-content{padding-left:10px !important; padding-right:10px !important;}
 .tl-slide-text-only .tl-slide-content-container .tl-slide-content .tl-text{width:95% !important; max-width:95% !important;}
-
+#timeline-embed{margin-bottom: 50px;width: 100%; height: 600px}
 
 /* media queries */
 @media screen and (min-width:768px) {
@@ -107,4 +107,11 @@ body {
 @media screen and (max-width:500px){
 	footer{height: 100px;}
 	.swrap {padding-bottom:100px;}
+	.tabs .date div {font-size:35px;}
+	.tabs .l-desc{font-size:20px;}
+	.tl-slide-content {padding-left: 0px !important;padding-right: 0px !important;}
+}
+
+@media screen and (max-width:400px){
+	.tabs .date div {font-size:2.75rem;}
 }
