@@ -7,6 +7,7 @@ var writeup_endpoint = 'https://spreadsheets.google.com/feeds/cells/19dZQg8tGtOs
 var year;
 var counter;
 var timeline;
+var timeline_years = [];
 
 //populate writeup
 $.getJSON(writeup_endpoint, function(data){
@@ -41,7 +42,14 @@ $.getJSON(incidents_endpoint, function(data) {
 
 		$('#inci-con .date').click(function(){
 
-			console.log(timeline);
+
+			var iyear = parseInt($(this).children('div').html());
+
+			var closest = timeline_years.reduce(function (prev, curr) {
+			  return (Math.abs(curr - iyear) < Math.abs(prev - iyear) ? curr : prev);
+			});
+
+			timeline.goToNext(timeline_years.indexOf(iyear));
 
 			$('#inci-con .date').removeClass('red-text');
 			$(this).addClass('red-text');
@@ -74,6 +82,8 @@ $.getJSON(legislation_endpoint, function(data) {
 		year = this.gsx$yearofpromulgation.$t;
 		year = year[0] + year[1] + year[2] + year[3];
 
+		timeline_years.push(parseInt(year));
+
 		timeline_events.push({
 	        "media": {
 	          "url": "",
@@ -84,13 +94,14 @@ $.getJSON(legislation_endpoint, function(data) {
 	        "text": {
 	        	"headline": this.gsx$law.$t,
 	          	"text": '<div id="legislation-'+counter+'" class="legislation row" style="margin-bottom:10px"> <div class="col-md-12"> <div class="l-row" style="border-top:1px solid #B70000; margin-top:20px;"> <div class="l-img"><img src="assets/img/law-icon.png"/></div><div class="l-text"> <div class="l-tag">LAW</div><div class="l-desc">'+this.gsx$law.$t+'</div></div></div><div class="l-row"> <div class="l-tag">REGIME</div><div class="l-desc">'+this.gsx$regime.$t+'</div></div><div class="l-row"> <div class="l-tag">KEY FEATURES</div><div class="l-desc">'+this.gsx$keyfeatures.$t+'</div></div></div></div>'
-	        }
+	        },
+	        "unique_id": counter,
 	      });
 		
 
 		//$('#legi-con').append('<div id="l-anc-'+counter+'" class="col-xs-3 col-md-2 date" div-toggle="#legislation-'+counter+'"><div>'+year+'</div></div>');
 		//$('#legislations').append('<div id="legislation-'+counter+'" class="legislation row hidden" style="margin-bottom:10px"> <div class="col-md-12"> <div class="l-row" style="border-top:1px solid #B70000; margin-top:20px;"> <div class="l-img"><img src="assets/img/law-icon.png"/></div><div class="l-text"> <div class="l-tag">LAW</div><div class="l-desc">'+this.gsx$law.$t+'</div></div></div><div class="l-row"> <div class="l-tag">REGIME</div><div class="l-desc">'+this.gsx$regime.$t+'</div></div><div class="l-row"> <div class="l-tag">KEY FEATURES</div><div class="l-desc">'+this.gsx$keyfeatures.$t+'</div></div></div></div>');
-		//counter++;
+		counter++;
 	});
 
 	var timeline_data = {events:timeline_events};
@@ -102,6 +113,8 @@ $.getJSON(legislation_endpoint, function(data) {
 	$(document).ready(function(){
 
 		$('#legi-con .date').click(function(){
+
+
 
 			$('#legi-con .date').removeClass('red-text');
 			$(this).addClass('red-text');
