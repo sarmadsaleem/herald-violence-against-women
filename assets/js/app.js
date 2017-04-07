@@ -49,7 +49,7 @@ $.getJSON(incidents_endpoint, function(data) {
 			  return (Math.abs(curr - iyear) < Math.abs(prev - iyear) ? curr : prev);
 			});
 
-			//console.log(timeline_years.indexOf(closest));
+			console.log(timeline_years.indexOf(closest));
 			timeline.goTo(timeline_years.indexOf(closest));
 
 			$('#inci-con .date').removeClass('red-text');
@@ -76,7 +76,19 @@ $.getJSON(legislation_endpoint, function(data) {
 	counter = 1;
 
 	//console.log(data.feed.entry);
-	var timeline_events = [];
+	var timeline_events = [{
+	        "media": {
+	          "url": "",
+	        },
+	        "start_date": {
+	          "year": 1978
+	        },
+	        "text": {
+	        	"headline": 'Post Zia Era',
+	          	"text": ''
+	        },
+	        
+	      }];
 
 	$(data.feed.entry).each(function(){
 
@@ -107,13 +119,19 @@ $.getJSON(legislation_endpoint, function(data) {
 
 	var timeline_options = {
 	    timenav_position: 'top',
+
 	}
 
 	var timeline_data = {events:timeline_events};
 	timeline = new TL.Timeline('timeline-embed', timeline_data, timeline_options);
 	//console.log(timeline_events);
+	$('#post-zia-era-marker').css('display','none');
+	$('#post-zia-era').css('display', 'none');
+	$('.tl-storyslider').addClass('hidden');
 
 	console.log('legislation populated');
+
+
 
 	$(document).ready(function(){
 
@@ -133,6 +151,15 @@ $.getJSON(legislation_endpoint, function(data) {
 		        scrollTop: $(el).offset().top
 		    }, 400);
 
+		});
+
+		
+		$( ".tl-timemarker" ).click(function(){
+			$('.tl-storyslider').removeClass('hidden');
+		});
+
+		$( ".date" ).click(function(){
+			$('.tl-storyslider').removeClass('hidden');
 		});
 
 	});
