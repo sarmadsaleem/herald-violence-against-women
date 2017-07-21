@@ -4,7 +4,7 @@ This interactive is intended for Herald (Publication of Dawn Media Group) aggreg
 
 See it in action here: https://sarmadsaleem.github.io/herald-violence-against-women/index.html
 
-Live version can be viewed here: 
+Live version can be viewed here: http://herald.dawn.com/special/voice-against-women-in-pakistan/
 
 Disclaimer: This was a freelance gig, all trademark, copyrights and intellectual property rights rest with Herald (Publication of Dawn Media Group).
 
